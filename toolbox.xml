@@ -1,0 +1,616 @@
+<xml id="toolbox" style="display: none">
+ 
+<category colour="#FF5722"  name="Input/Output">
+ 
+  <block type="usb">
+  </block> 
+  <block type="wireless">
+  </block> 
+  
+  <block type="io_digitalwrite">
+    <value name="STATE">
+    <block type="io_highlow"></block>
+    </value>
+  </block>
+  <block type="io_digitalread"></block>
+  <block type="io_builtin_led">
+  <value name="STATE">
+  <block type="io_highlow"></block>
+  </value>
+  </block>
+  <block type="io_analogread"></block>
+  <block type="io_highlow"></block>
+  <block type="var_1"></block>
+  <block type="variables_get"></block>
+  </category>
+
+  
+<category colour="#E91E63" name="Logic !">
+  <block  type="controls_if"></block>
+  <block type="logic_compare"></block>
+  <block type="bitwise_"></block>
+  <block type="convert_to"></block>
+
+  <block type="logic_operation"></block>
+  <block type="logic_negate">
+</block>
+  <block type="logic_boolean"></block>
+  <block type="logic_null"></block>
+  <block type="increment_">
+ <value name="a"><shadow type="math_number"><field name="NUM">9</field></shadow></value> 
+</block>
+  <block type="decrement_">
+ <value name="a"><shadow type="math_number"><field name="NUM">9</field></shadow></value> 
+</block>
+</category>
+
+<category name="Variable" colour="#9C27B0" custom="VARIABLE">
+
+</category>
+<category colour="#009688" name="Control">
+
+  <block type="for_1">
+
+</block>
+
+  <block type="while_1">
+</block>
+  <block type="controls_repeat_ext">
+
+  </block>
+  <block type="controls_whileUntil">
+</block>
+  <block type="controls_for">
+  </block>
+  <block type="controls_flow_statements"></block>
+</category>
+
+<category id="catMath" colour="#8BC34A" name="Math">
+  <block id="cat" type="math_number"></block>
+  <block type="math_arithmetic"></block>
+  <block type="math_single"></block>
+  <block type="math_trig"></block>
+  <block type="math_constant"></block>
+  <block type="math_number_property"></block>
+  <block type="include_"></block>
+  <block type="math_change"><value name="DELTA">
+ <block type="math_number">
+ <field name="NUM">1</field>
+ </block></value>
+  </block>
+  <block type="math_round"></block>
+  <block type="math_modulo"></block>
+  <block type="math_constrain"><value name="LOW">
+ <block type="math_number">
+ <field name="NUM">1</field>
+ </block></value><value name="HIGH">
+ <block type="math_number">
+ <field name="NUM">100</field>
+ </block></value>
+  </block>
+  <block type="math_random_int"><value name="FROM">
+ <block type="math_number">
+ <field name="NUM">1</field>
+ </block></value><value name="TO">
+ <block type="math_number">
+ <field name="NUM">100</field>
+ </block></value>
+  </block>
+  <block type="math_random_float"></block>
+</category>
+
+<category id="catText" colour="#CDDC39" name="Text">
+  <block type="text"></block>
+  <block type="text_join"></block>
+  <block type="text_append"><value name="TEXT">
+ <block type="text"></block></value>
+  </block>
+  <block type="text_length"></block>
+  <block type="text_isEmpty"></block>
+</category>
+
+<category id="catFunctions" colour="#FFC107" name="Functions" custom="PROCEDURE">
+</category>
+
+<category colour="#795548" name="Time">
+  <block type="time_micros">
+</block>
+  <block type="infinite_loop"></block>
+  <block type="time_delaymicros"></block>
+  <block type="time_millis"></block>
+  <block type="delay_time">
+</block>
+</category>
+
+
+
+ 
+<category colour="#FF99CC"  name="Bluetooth">
+<block type="b_start"></block>
+<block type="b_start_read">
+</block>
+<block type="b_start_write">
+ <value name="NAME"><shadow type="text"><field name="TEXT">ok</field></shadow></value> 
+ </block>
+<block type="b_start_exit"></block>
+</category>
+ 
+<category colour="#FF0F7D"  name="WIFI">
+<block type="ap_connected"></block>
+<block type="ap_read">
+</block>
+<block type="ap_exit">
+</block>
+<block type="ap_write">
+ <value name="NAME"><shadow type="text"><field name="TEXT">ok</field></shadow></value> 
+ </block>
+ 
+</category>
+ 
+<sep></sep>
+
+<category colour="#001aaa"  name="Serial">
+<block type="serial_set"></block>
+<block type="serial_read">
+</block>
+<block type="serial_send">
+<value name="NAME"><shadow type="text"><field name="TEXT">ok</field></shadow></value> 
+ 
+</block>
+<block type="serial_exit"></block>
+</category>
+<sep></sep>
+
+<category colour="#001fff"  name="OLED Display">
+<block type="oled_text">
+<value name="NAME"><shadow type="text"><field name="TEXT">ok</field></shadow></value> 
+ 
+</block>
+<block type="oled_clear"></block>
+<block type="oled_update"></block>
+<block type="oled_line">
+</block>
+<block type="oled_rect"></block>
+<block type="oled_circle"></block>
+<block type="oled_dot"></block>
+<block type="oled_col"></block>
+</category>
+<sep></sep>
+ 
+ 
+ 
+ 
+<!--category  name="rgb !">
+  
+  <block type="rgb_main"></block>
+  <block type="rgb_light">
+    <value name="red_">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+    <value name="green_">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+    <value name="blue_">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+
+</block>
+  <block type="rgb_blink">
+    <value name="red">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+    <value name="green">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+    <value name="blue">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+
+</block>
+  <block type="rgb_on">
+    <value name="Delay">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+</block>
+  <block type="rgb_off">
+    <value name="Delay">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+</block>
+  <block type="rgb_brightness">
+    <value name="brightness">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+</block>
+  <block type="rgb_fadein">
+    <value name="step">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+    <value name="red">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+    <value name="green">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+    <value name="blue">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+    <value name="time">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+
+</block>
+  <block type="rgb_fadeout">
+    <value name="step">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+    <value name="red">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+    <value name="green">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+    <value name="blue">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+    <value name="time">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+
+</block>
+</category-->
+
+
+<!--category name="𝟖𝐱𝟖 𝐃𝐨𝐭 𝐌𝐚𝐭𝐫𝐢𝐱 𝐃𝐢𝐬𝐩𝐥𝐚𝐲">
+  <block type="dot_main"></block> 
+<block type="dot_set_texting">
+    <value name="text">
+      <block type="text">
+        <field name="TEXT">1?</field>
+      </block>
+    </value>
+    <value name="posi">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+</block>
+<block type="dot_matrix_on">
+</block>
+<block type="dot_matrix_off">
+</block>
+<block type="dot_set_lcd">
+    <value name="row">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+    <value name="col">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+    <value name="pos">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+    <value name="light">
+      <block type="logic_boolean">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+
+</block>
+<block type="dot_set_char">
+    <value name="posi">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+    <value name="char">
+    </value>
+
+</block>
+
+<block type="dot_bri">
+    <value name="NAME">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+</block>
+
+
+</category>
+ <sep></sep-->
+<category colour="#00c066" name="𝐉𝐨𝐲𝐬𝐭𝐢𝐜𝐤">
+  <block type="joystick_main"></block>
+<block type="joystick_x"></block>
+<block type="joystick_y"></block>
+<block type="joystick_up"></block>
+<block type="joystick_down"></block>
+<block type="joystick_left"></block>
+<block type="joystick_right"></block>
+
+<block type="joystick_button"></block>
+
+
+</category>
+ <sep></sep>
+<!--category name="🅺🅴🆈🅿🅰🅳">
+<block type="keypad_settings"></block>
+<block type="keypad_press"></block>
+<block type="keypad_hold_time"></block>
+<block type="keypad_press_a"></block>
+<block type="keypad_rel_a"></block>
+<block type="keypad_hold_a"></block>
+<block type="keypad_multiple_key"></block>
+<block type="keypad_multiple_state"></block>
+
+
+
+</category>
+ <sep></sep-->
+
+<!--category name="𝐒𝐞𝐯𝐞𝐧 𝐬𝐞𝐠𝐦𝐞𝐧𝐭">
+ <block type="seven_segment"></block>
+<block type="seven_segment">
+    <value name="digit">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+</block>
+ <sep></sep>
+</category>
+ <sep></sep-->
+
+<category colour="#666699" name="𝐒𝐰𝐢𝐭𝐜𝐡">
+<block type="button_onpressed"></block>
+<block type="button_onrel"></block>
+<block type="button_ispressed"></block>
+<block type="button_isrel"></block>
+<block type="button_reset"></block>
+<block type="button_setting"></block>
+</category>
+ <sep></sep> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<!--category name="『 2 』 𝐖𝐢𝐫𝐞𝐥𝐞𝐬𝐬">
+
+
+<category name="𝐁𝐥𝐮𝐞𝐭𝐨𝐨𝐭𝐡">
+<block type="bluetooth_write">
+    <value name="send">
+      <block type="text">
+        <field name="TEXT">Any</field>
+      </block>
+    </value>
+</block>
+<block type="bluetooth_read"></block>
+    <value name="speed">
+      <block type="math_number">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+</category>
+ <sep></sep>
+
+
+<category name="𝐈𝐑 𝐑𝐞𝐦𝐨𝐭𝐞">
+<block type="ir_read"></block>
+</category>
+ <sep></sep>
+
+</category>
+ <sep></sep-->
+<!--scategory name="𝐋𝐂𝐃">
+  <block type="lcd_settings"></block>
+  <block type="lcd_clear"></block>
+  <block type="lcd_right">
+    <value name="speed">
+      <block type="math_number">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+</block>
+  <block type="lcd_left">
+    <value name="speed">
+      <block type="math_number">
+        <field name="NUM">2</field>
+      </block>
+    </value>
+</block>
+  <block type="lcd_light">
+    <value name="on_pos">
+      <block type="logic_boolean">
+         <field name="TEXT">?</field>
+      </block>
+    </value>
+</block> 
+  <block type="lcd_scroll">
+    <value name="Delay">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+</block> 
+  <block type="lcd_print">
+    <value name="p">
+      <block type="text">
+        <field name="TEXT">?</field>
+      </block>
+    </value>
+</block> 
+
+</category-->
+ 
+ 
+ 
+ 
+<!--category name="『 1 』  𝐒𝐞𝐧𝐬𝐨𝐫𝐬">
+ <sep></sep>
+ <sep></sep>
+ <sep></sep>
+<category name="𝐌𝐨𝐭𝐢𝐨𝐧 𝐒𝐞𝐧𝐬𝐨𝐫 ">
+  <block type="motion_detect"></block>
+</category>
+ <sep></sep>
+<category name="𝐒𝐩𝐞𝐞𝐝 𝐃𝐞𝐭𝐞𝐜𝐭𝐨𝐫">
+  <block type="speed_detect"></block>
+</category>
+ <sep></sep>
+<category name="𝐒𝐨𝐮𝐧𝐝 𝐃𝐞𝐭𝐞𝐜𝐭𝐨𝐫">
+  <block type="sound_detect"></block>
+</category>
+ <sep></sep>
+<category name="𝐋𝐢𝐠𝐡𝐭 𝐒𝐞𝐧𝐬𝐨𝐫">
+  <block type="ldr"></block>
+</category>
+ <sep></sep>
+<category name="𝐈𝐑">
+  <block type="ir_detect"></block>
+</category>
+ <sep></sep>
+
+<category name="𝐀𝐜𝐜𝐞𝐫𝐨𝐦𝐞𝐭𝐞𝐫">
+  <block type="acc_x"></block>
+  <block type="acc_y"></block>
+ <block type="acc_z"></block>
+
+</category>
+ 
+
+<category name="𝐔𝐥𝐭𝐫𝐚𝐬𝐨𝐧𝐢𝐜 𝐒𝐞𝐧𝐬𝐨𝐫">
+  <block type="ultrasonic"></block>
+</category>
+</category>
+
+ 
+ <sep></sep-->
+  
+ 
+ <category name=" 𝐃𝐂 𝐌𝐨𝐭𝐨𝐫𝐬 ">
+ 
+<block type="motor_stop"></block>
+<block type="motor_forward">
+    <value name="speed">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+</block>
+
+</category>
+ <sep></sep>
+<!--category name=" 𝐏𝐎𝐓">
+<block type="pot_detect"></block>
+</category-->
+ 
+<category name="𝐋𝐄𝐃">
+ 
+  <block type="led__on">
+  
+    <value name="b">
+      <block type="math_number">
+        <field name="NUM">255</field>
+      </block>
+    </value>   
+	
+	<value name="c">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>   
+	
+	<value name="pin">
+      <block type="math_number">
+        <field name="NUM">2</field>
+      </block>
+    </value>   
+	
+</block>
+</category>
+
+
+
+<!--category name=" 𝐑𝐅𝐈𝐃" >
+<block type="RFID"> </block>    
+</category-->
+ 
+<category name="𝐁𝐮𝐳𝐳𝐞𝐫 ">
+<block type="buzzer_on">
+    <value name="freq">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+    <value name="time">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+
+</block>
+<block type="buzzer_off">
+</block>
+</category>
+ <sep></sep>
+<category name=" 𝐒𝐞𝐫𝐯𝐨">
+<block type="servo_write">
+    <value name="SERVO_ANGLE">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+</block>
+<block type="servo_read"></block>
+</category>
+ 
+</xml>
+
+

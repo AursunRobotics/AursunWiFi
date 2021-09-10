@@ -1,0 +1,246 @@
+
+<!-- saved from url=(0016)http://localhost -->
+<html >
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible"  content="IE=10"/> 
+    <meta name="google" value="notranslate">
+  <title>AursunRobotics 1.0.2</title>
+   <script type="text/javascript" src="blockly_compressed.js"></script>
+  <script type="text/javascript" src="blocks_compressed.js"></script>
+  <script type="text/javascript" src="arduino_compressed.js"></script>
+  <script type="text/javascript" src="javascript_compressed.js"></script>
+  <script type="text/javascript" src="gen/bluetooth.js"></script>
+   <script type="text/javascript" src="gen/wifi.js"></script>
+  <script type="text/javascript" src="gen/ota.js"></script>
+  <script type="text/javascript" src="gen/serial.js"></script>
+      
+  <script type="text/javascript" src="gen/oled.js"></script>
+      
+   
+       
+  <script type="text/javascript" src="en.js"></script>
+  <script type="text/javascript" src="Blob.js"></script>
+  <script type="text/javascript" src="spin.js"></script>
+  <script type="text/javascript" src="FileSaver.min.js"></script>
+  <script type="text/javascript" src="blockly_helper.js"></script>
+  <script src="main_compressed.js"></script>
+  
+  <script type="text/javascript" src="example.js"></script>
+  <script>
+////////////////////////////////////////////////
+//////////////////////////////////////////////////
+///////////////////////////////////////////////
+  ///  Examples 
+
+var locate=false;
+
+ function Blink()
+ {
+	 clear_all();
+   var xml = Blockly.Xml.textToDom(blink);
+   Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml); 
+  }
+ 
+  
+ function DigitalWrite()
+ {
+	 clear_all();
+   var xml = Blockly.Xml.textToDom(d_w);
+   Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml); 
+  }
+ function DigitalWrite()
+ {
+	 clear_all();
+   var xml = Blockly.Xml.textToDom(d_r);
+   Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml); 
+  }
+ 
+ 
+ 
+ function AnalogWrite()
+ {clear_all();
+	 
+   var xml = Blockly.Xml.textToDom(a_w);
+   Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml); 
+  }
+ 
+ var a='<xml><block type="usb"></block></xml>';
+
+  
+  /////////////////////////////////////////////////////////////////////////////
+  /////////////////////////
+  
+  /////////////
+  
+     function done23(a2)
+  {
+   var xml = Blockly.Xml.textToDom(a2);
+   Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml); 
+  }
+  
+  
+   function done()
+  {
+   var xml = Blockly.Xml.textToDom(a);
+   Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml); 
+  }
+  
+  function backup_blocks() {
+  if ('localStorage' in window) {
+    var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+    window.localStorage.setItem('arduino', Blockly.Xml.domToText(xml));
+  }
+}
+  
+  function restore_blocks()
+  {
+  
+  if( window.localStorage)
+    var xml = Blockly.Xml.textToDom( window.localStorage.arduino);
+     Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml); 
+
+}
+
+  function clear_all()  
+  {
+   Blockly.mainWorkspace.clear();
+   done();
+  }
+   function restore_blocks() {
+  if ('localStorage' in window && window.localStorage.arduino) {
+    var xml = Blockly.Xml.textToDom(window.localStorage.arduino);
+    Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
+  }
+}
+
+ function blockly_off()
+ {
+   Blockly.mainWorkspace.setVisible(false); 	
+    
+ }
+ function blockly_on()
+ {
+   Blockly.mainWorkspace.setVisible(true); 
+
+ }
+function undo()
+{
+  
+  Blockly.mainWorkspace.undo(false);
+}
+function redo()
+{
+  Blockly.mainWorkspace.undo(true);
+}
+function data12()
+{
+ Blockly.Xml.deleteNext('<block  type="noloop"></block>');
+document.getElementById("7867").innerText="fd";//getBlockById("122");//remainingCapacity();
+  
+}
+
+goog.provide('Main');
+goog.require('Blockly.Msg.en');
+// Core
+goog.require('Blockly');
+
+
+ 
+
+function init(inform)
+ {
+   Blockly.inject('blocklyDiv',
+    {
+	toolbox:inform,
+	grid:
+          {spacing: 13,
+           length:13,
+           colour: '#ccc',
+           snap: false},	
+	horizontalLayout:false,
+	 media: 'media/',
+     zoom:
+         {controls: true,
+          wheel: true,		      
+          startScale: 1.0,
+          maxScale: 3,
+          minScale: 0.3,
+          scaleSpeed: 1.2},
+     trashcan: true});
+	 done() ;
+	auto_save_and_restore_blocks();
+
+}
+
+
+var done;
+function arduino_text()
+ {
+ //document.getElementById('content_arduino').style.visibility = 'hidden';     
+ //var arduinoTextarea = document.getElementById('content_arduino');
+     //arduinoTextarea.value = 
+return Blockly.Arduino.workspaceToCode();
+//return Blockly.JavaScript.workspaceToCode();
+   //  arduinoTextarea.focus();  	 	 
+  //backup_blocks();
+
+}
+
+
+function blocks_code()
+{
+/* 
+. document.getElementById('content_blocks').style.visibility = 'hidden';
+  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var data = Blockly.Xml.domToText(xml); 
+  var a=document.getElementById('content_blocks');
+   a.value=data;
+   a.focus(); */
+     var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var data = Blockly.Xml.domToText(xml); 
+  return data;
+   
+}  
+
+
+
+//window.addChangeListener(javascript);
+
+  </script>  
+  <style>
+    html, body {
+      height: 100%;
+    }
+    body {
+      background-color: #fff;
+      font-family: sans-serif;
+      margin: 0;
+      overflow: hidden;
+    }
+	  .content {
+      visibility:hidden;
+      margin: 0;
+      padding: 1ex;
+      position: absolute;
+      direction: ltr;
+    }
+  .myLabelStyle>.blocklyFlyoutLabelText {
+  font-style: italic;
+  fill: green;
+   
+}
+  </style>
+</head>
+<body>
+    
+              <input type="file" id="load" style="display: none;"/>				             					
+           <div  id="blocklyDiv"style=" height:100%; width: 100%;"></div>
+           <div id="fakeload"></div>  
+  <!--textarea  style=" color:white;  overflow-x: hidden; overflow-y:hidden; border: none; height:100%; width: 100%;" id="content_arduino" readonly class="content"></textarea>
+  <!--textarea  style=" color:white;  overflow-x: hidden; overflow-y:hidden; border: none; height:100%; width: 100%;" id="content_blocks"></textarea-->
+
+
+  </body>
+  </html>
